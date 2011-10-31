@@ -1,0 +1,16 @@
+name = CultuurNet API Views
+description = Provides integration with views.
+package = CultuurNet API
+version = VERSION
+core = 7.x
+dependencies[] = cnapi
+dependencies[] = views
+; Files
+files[] = cnapi_views.module
+files[] = plugins/cnapi_views_query.inc
+files[] = plugins/cnapi_views_row.inc
+; Views handlers
+files[] = handlers/views_handler_filter_cnapi.inc
+files[] = handlers/views_handler_filter_cnapi_q.inc
+files[] = handlers/views_handler_filter_cnapi_k.inc
+files[] = handlers/views_handler_filter_cnapi_heading.inc

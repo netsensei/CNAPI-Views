@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Cnapi Views integration.
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function cnapi_views_views_api() {
+  return array('api' => '3.0-dev');
+}
