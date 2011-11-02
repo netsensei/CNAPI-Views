@@ -28,7 +28,7 @@ class views_handler_filter_cnapi extends views_handler_filter {
    * Shortcut to display the value form.
    */
   function show_value_form(&$form, &$form_state) {
-    $this->value_form($form, $form_state);    
+    $this->value_form($form, $form_state);
   }
 
 }
