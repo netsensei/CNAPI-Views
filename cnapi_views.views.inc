@@ -51,6 +51,14 @@ function cnapi_views_data() {
     ),
   );
 
+  $data['cnapievents']['isfree'] = array(
+    'title' => t('Is free'),
+    'help' => t('Is the event free or not.'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_isfree',
+    ),
+  );
+
   return $data;
 }
 
