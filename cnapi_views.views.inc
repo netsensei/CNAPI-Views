@@ -75,6 +75,14 @@ function cnapi_views_data() {
     ),
   );
 
+  $data['cnapievents']['agebetween'] = array(
+    'title' => t('Age between'),
+    'help' => t('Select objects with the age between x and y'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_agebetween',
+    ),
+  );
+
   return $data;
 }
 
