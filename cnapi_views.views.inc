@@ -21,7 +21,7 @@ function cnapi_views_data() {
   
   $data['cnapievents']['q'] = array(
     'title' => t('Query'),
-    'help' => t('Perform a free text search.'), // The help that appears on the UI,    
+    'help' => t('Perform a free text search.'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_q',
     ),
@@ -29,7 +29,7 @@ function cnapi_views_data() {
   
   $data['cnapievents']['k'] = array(
     'title' => t('Keywords'),
-    'help' => t('Perform a keywords/tags search.'), // The help that appears on the UI,    
+    'help' => t('Perform a keywords/tags search.'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_k',
     ),
@@ -37,15 +37,15 @@ function cnapi_views_data() {
   
   $data['cnapievents']['heading'] = array(
     'title' => t('Headings'),
-    'help' => t('Perform search based on headings.'), // The help that appears on the UI,    
+    'help' => t('Perform search based on headings.'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_heading',
     ),
   );
   
   $data['cnapievents']['daterange'] = array(
-    'title' => t('Daterange'),
-    'help' => t('Perform search based on a date range.'), // The help that appears on the UI,    
+    'title' => t('Date'),
+    'help' => t('Perform search based on a date (range).'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_daterange',
     ),
