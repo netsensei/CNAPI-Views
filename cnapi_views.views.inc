@@ -49,16 +49,7 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_daterange',
     ),
-  );  
-
-
-  /* $data['cnapi']['table']['group'] = t('CNAPI');
-  $data['cnapi']['table']['base'] = array(
-    'field' => 'cdbid',
-    'title' => t('CNAPI'),
-    'help' => t('CNAPI'),
-    'query class' => 'cnapi_views_query'
-  ); */
+  );
 
   return $data;
 }
