@@ -2,6 +2,11 @@
 
 class cnapi_views_query extends views_plugin_query {
   
+  function init($base_table, $base_field, $options) {
+    parent::init($base_table, $base_field, $options);
+    drupal_add_css(drupal_get_path('module', 'cnapi_views') . '/css/cnapi_views.css');
+  }
+
   /**
    * Add a field to the query table, possibly with an alias. This will
    * automatically call ensure_table to make sure the required table

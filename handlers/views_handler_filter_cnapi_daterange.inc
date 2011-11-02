@@ -24,9 +24,7 @@ class views_handler_filter_cnapi_daterange extends views_handler_filter_cnapi {
    */
   function init(&$view, &$options) {
     parent::init($view, $options);
-    // Somehow [#attached]['css'] doesn't work with the CNAPI Datepicker
-    drupal_add_css(drupal_get_path('module', 'cnapi_views') . '/css/cnapi_views.css');
-  
+
     // Set the operator, this is set dynamically
     $this->operator = $this->options['operator'];
     
