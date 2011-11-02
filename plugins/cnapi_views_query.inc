@@ -124,10 +124,8 @@ class cnapi_views_query extends views_plugin_query {
     
     switch ($this->base_table) {
       case 'cnapievents' :
-        dsm($params);
         $objects = cnapi_get_events($params);
     }
-    dsm($objects);
     
     if ($objects['total'] > 0) {
       $view->result = $objects['data'];
