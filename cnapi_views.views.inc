@@ -47,7 +47,7 @@ function cnapi_views_data() {
     'title' => t('Daterange'),
     'help' => t('Perform search based on a date range.'), // The help that appears on the UI,    
     'filter' => array(
-      'handler' => 'views_handler_filter_cnapi_heading',
+      'handler' => 'views_handler_filter_cnapi_daterange',
     ),
   );  
 

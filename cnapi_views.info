@@ -14,3 +14,4 @@ files[] = handlers/views_handler_filter_cnapi.inc
 files[] = handlers/views_handler_filter_cnapi_q.inc
 files[] = handlers/views_handler_filter_cnapi_k.inc
 files[] = handlers/views_handler_filter_cnapi_heading.inc
+files[] = handlers/views_handler_filter_cnapi_daterange.inc
