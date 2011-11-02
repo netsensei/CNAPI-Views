@@ -67,6 +67,14 @@ function cnapi_views_data() {
     ),
   );
 
+  $data['cnapievents']['latlng'] = array(
+    'title' => t('GIS Coordinates'),
+    'help' => t('Select objects for a GIS location'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_latlng',
+    ),
+  );
+
   return $data;
 }
 
