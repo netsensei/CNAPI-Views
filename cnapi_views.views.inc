@@ -59,6 +59,14 @@ function cnapi_views_data() {
     ),
   );
 
+  $data['cnapievents']['location'] = array(
+    'title' => t('Location'),
+    'help' => t('Select objects for a location'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_location',
+    ),
+  );
+
   return $data;
 }
 
