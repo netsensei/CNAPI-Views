@@ -43,13 +43,23 @@ function cnapi_views_data() {
     ),
   );
   
+  // Datetype (datetype) filter
+  $data['cnapievents']['datetype'] = array(
+    'title' => t('Datetype'),
+    'help' => t('Perform search based on a datetype.'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_datetype',
+    ),
+  );
+
+  // Daterange (daterange, date) filter
   $data['cnapievents']['daterange'] = array(
-    'title' => t('Date'),
-    'help' => t('Perform search based on a date (range).'),
+    'title' => t('Date(range)'),
+    'help' => t('Perform search based on a date(range).'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_daterange',
     ),
-  );
+  );  
 
   $data['cnapievents']['isfree'] = array(
     'title' => t('Is free'),
