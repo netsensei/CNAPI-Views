@@ -18,7 +18,26 @@ function cnapi_views_data() {
     'help' => t('CNAPI Events'),
     'query class' => 'cnapi_views_query',
   );
-  
+
+  // CNAPI Actors
+  $data['cnapiactors']['table']['group'] = t('CNAPI Actors');
+  $data['cnapiactors']['table']['base'] = array(
+    'field' => 'cdbid',
+    'title' => t('CNAPI Actors'),
+    'help' => t('CNAPI Actors'),
+    'query class' => 'cnapi_views_query',
+  );
+
+  // CNAPI Productions
+  $data['cnapiproductions']['table']['group'] = t('CNAPI Productions');
+  $data['cnapiproductions']['table']['base'] = array(
+    'field' => 'cdbid',
+    'title' => t('CNAPI Productions'),
+    'help' => t('CNAPI Productions'),
+    'query class' => 'cnapi_views_query',
+  );
+
+  // Query (q) Filter
   $data['cnapievents']['q'] = array(
     'title' => t('Query'),
     'help' => t('Perform a free text search.'),
@@ -114,11 +133,27 @@ function cnapi_views_views_plugins() {
       ),
     ),
     'row' => array(
-      'cnapi' => array(
-        'title' => t('Cnapi'),
-        'handler' => 'cnapi_views_row',
+      'cnapievent' => array(
+        'title' => t('CNAPI Event'),
+        'handler' => 'cnapi_views_row_event',
         'path' => $path . '/plugins',
         'base' => array('cnapievents'),
+        'uses options' => TRUE,
+        'type' => 'normal',
+      ),
+      'cnapiactor' => array(
+        'title' => t('CNAPI Actor'),
+        'handler' => 'cnapi_views_row_actor',
+        'path' => $path . '/plugins',
+        'base' => array('cnapiactors'),
+        'uses options' => TRUE,
+        'type' => 'normal',
+      ),
+      'cnapiproduction' => array(
+        'title' => t('CNAPI Production'),
+        'handler' => 'cnapi_views_row_production',
+        'path' => $path . '/plugins',
+        'base' => array('cnapiproductions'),
         'uses options' => TRUE,
         'type' => 'normal',
       ),

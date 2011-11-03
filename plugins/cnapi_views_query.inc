@@ -129,6 +129,12 @@ class cnapi_views_query extends views_plugin_query {
     switch ($this->base_table) {
       case 'cnapievents' :
         $objects = cnapi_get_events($params);
+        break;
+      case 'cnapiactors' :
+        $objects = cnapi_get_actors($params);
+        break;
+      case 'cnapiproductions' :
+        $objects = cnapi_get_productions($params);
     }
     
     if ($objects['total'] > 0) {
