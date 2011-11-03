@@ -51,7 +51,7 @@ class views_handler_filter_cnapi_datetype extends views_handler_filter_cnapi {
       '#type' => 'select',
       '#title' => 'Periode',
       '#options' => $options,
-      '#default_value' => -1,
+      '#default_value' => $this->when,
     );
   }
 
