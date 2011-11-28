@@ -11,6 +11,9 @@ class cnapi_views_query extends views_plugin_query {
    * automatically call ensure_table to make sure the required table
    * exists, *unless* $table is unset.
    *
+   * This function is copied from views_plugin_query_default. The row style plugin
+   * still expects a base field set in the query object.
+   *
    * @param $table
    *   The table this field is attached to. If NULL, it is assumed this will
    *   be a formula; otherwise, ensure_table is used to make sure the
