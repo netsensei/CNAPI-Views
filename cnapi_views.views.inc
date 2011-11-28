@@ -262,5 +262,15 @@ function cnapi_views_views_plugins() {
         'type' => 'normal',
       ),
     ),
+    'pager' => array(
+      'cnapipagerfull' => array(
+        'title' => t('Paged output, CNAPI Full pager'),
+        'short title' => t('CNAPI Full'),
+        'help' => t('Use the CNAPI Full pager output.'),
+        'handler' => 'cnapi_views_pager_full',
+        'uses options' => TRUE,
+        'parent' => 'full',
+      ),
+    ),
   );
 }

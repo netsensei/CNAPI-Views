@@ -140,6 +140,8 @@ class cnapi_views_query extends views_plugin_query {
     if ($objects['total'] > 0) {
       $view->result = $objects['data'];
       $view->total_rows = $objects['total'];
+      $this->pager->set_total_items($objects['total']);
+      $this->pager->update_page_info();
       $view->pager['current_page'] = $this->pager->current_page;
     }
     $view->execute_time = microtime() - $start;

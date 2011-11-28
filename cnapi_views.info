@@ -11,6 +11,7 @@ files[] = plugins/cnapi_views_query.inc
 files[] = plugins/cnapi_views_row_event.inc
 files[] = plugins/cnapi_views_row_actor.inc
 files[] = plugins/cnapi_views_row_production.inc
+files[] = plugins/cnapi_views_pager_full.inc
 ; Views handlers
 files[] = handlers/views_handler_filter_cnapi.inc
 files[] = handlers/views_handler_filter_cnapi_q.inc
