@@ -165,6 +165,15 @@ function cnapi_views_data() {
     ),
   );
 
+  // Location filter
+  $data['cnapiproductions']['location'] = array(
+    'title' => t('Location'),
+    'help' => t('Select objects based on their location name or GUID'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_location',
+    ),
+  );
+
   // LatLng (latlng) filter
   $data['cnapiactors']['latlng'] = array(
     'title' => t('GIS Coordinates'),
