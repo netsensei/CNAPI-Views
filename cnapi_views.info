@@ -22,3 +22,4 @@ files[] = handlers/views_handler_filter_cnapi_isfree.inc
 files[] = handlers/views_handler_filter_cnapi_location.inc
 files[] = handlers/views_handler_filter_cnapi_latlng.inc
 files[] = handlers/views_handler_filter_cnapi_agebetween.inc
+files[] = handlers/views_handler_sort_cnapi.inc

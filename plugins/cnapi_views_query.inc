@@ -123,7 +123,7 @@ class cnapi_views_query extends views_plugin_query {
 
     // sorting
     if (!empty($this->orderby)) {
-      $params['sort'] = $this->orderby[0];
+      $params['sort'] = $this->orderby;
     }
     
     switch ($this->base_table) {
@@ -171,13 +171,9 @@ class cnapi_views_query extends views_plugin_query {
     );
   }
 
-  function add_orderby($table_alias, $real_field, $order = NULL) {
-    if (is_null($order)) {
-      $this->orderby[] = $real_field;
-    }
-    else {
-      $order = strtolower($order);
-      $this->orderby[] = "$real_field $order";
+  function add_orderby($sort = NULL, $direction = NULL) {
+    if (!is_null($sort) && !is_null($direction)) {
+      $this->orderby = $sort . ' ' . $direction;
     }
   }
 }

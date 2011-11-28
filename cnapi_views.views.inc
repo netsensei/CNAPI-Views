@@ -44,6 +44,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_q',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   $data['cnapiactors']['q'] = array(
@@ -52,6 +55,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_q',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
   
   $data['cnapiproductions']['q'] = array(
@@ -59,6 +65,9 @@ function cnapi_views_data() {
     'help' => t('Perform a free text search.'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_q',
+    ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
     ),
   );
 
@@ -69,6 +78,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_k',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   $data['cnapiactors']['k'] = array(
@@ -77,6 +89,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_k',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   $data['cnapiproductions']['k'] = array(
@@ -84,6 +99,9 @@ function cnapi_views_data() {
     'help' => t('Perform a keywords/tags search.'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_k',
+    ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
     ),
   );
 
@@ -94,6 +112,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_heading',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   // Datetype (datetype) filter
@@ -102,6 +123,9 @@ function cnapi_views_data() {
     'help' => t('Perform search based on a datetype.'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_datetype',
+    ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
     ),
   );
 
@@ -112,6 +136,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_daterange',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );  
 
   // Isfree (isfree) filter
@@ -121,6 +148,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_isfree',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   $data['cnapiproductions']['isfree'] = array(
@@ -129,14 +159,20 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_isfree',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   // LatLng (latlng) filter
   $data['cnapievents']['location'] = array(
-    'title' => t('Location'),
+    'title' => t('City/Region'),
     'help' => t('Select objects for a location'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_location',
+    ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
     ),
   );
 
@@ -145,6 +181,9 @@ function cnapi_views_data() {
     'help' => t('Select objects for a GIS location'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_latlng',
+    ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
     ),
   );
 
@@ -155,6 +194,9 @@ function cnapi_views_data() {
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_agebetween',
     ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
+    ),
   );
 
   $data['cnapiproductions']['agebetween'] = array(
@@ -162,6 +204,9 @@ function cnapi_views_data() {
     'help' => t('Select objects with the age between x and y'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_agebetween',
+    ),
+    'sort' => array(
+      'handler'=> 'views_handler_sort_cnapi',
     ),
   );
 
