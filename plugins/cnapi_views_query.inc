@@ -1,7 +1,7 @@
 <?php
 
 class cnapi_views_query extends views_plugin_query {
-  
+
   function init($base_table, $base_field, $options) {
     parent::init($base_table, $base_field, $options);
   }
@@ -125,7 +125,7 @@ class cnapi_views_query extends views_plugin_query {
     if (!empty($this->orderby)) {
       $params['sort'] = $this->orderby;
     }
-    
+
     switch ($this->base_table) {
       case 'cnapievents' :
         $objects = cnapi_get_events($params);
@@ -136,7 +136,7 @@ class cnapi_views_query extends views_plugin_query {
       case 'cnapiproductions' :
         $objects = cnapi_get_productions($params);
     }
-    
+
     if ($objects['total'] > 0) {
       $view->result = $objects['data'];
       $view->total_rows = $objects['total'];
@@ -153,7 +153,7 @@ class cnapi_views_query extends views_plugin_query {
    */
   function _get_query_params($where) {
     $params = array();
-    
+
     if (is_array($where)) {
       foreach ($where as $group => $group_where) {
         if (is_array($group_where['conditions']) && !empty($group_where['conditions'])) {
@@ -163,13 +163,13 @@ class cnapi_views_query extends views_plugin_query {
         }
       }
     }
-    
+
     return $params;
   }
 
   function add_where($group, $clause, $value, $operator) {
     $this->where[$group]['conditions'][] = array(
-      $operator => $value, 
+      $operator => $value,
     );
   }
 
