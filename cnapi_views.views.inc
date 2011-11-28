@@ -139,15 +139,33 @@ function cnapi_views_data() {
     ),
   );
 
-  // LatLng (latlng) filter
-  $data['cnapievents']['location'] = array(
+  // City/Region filter
+  $data['cnapievents']['cityregion'] = array(
     'title' => t('City/Region'),
-    'help' => t('Select objects for a location'),
+    'help' => t('Select objects for a city or a region'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_cityregion',
+    ),
+  );
+
+  $data['cnapiactors']['cityregion'] = array(
+    'title' => t('City/Region'),
+    'help' => t('Select objects for a city or a region'),
+    'filter' => array(
+      'handler' => 'views_handler_filter_cnapi_cityregion',
+    ),
+  );
+
+  // Location filter
+  $data['cnapievents']['location'] = array(
+    'title' => t('Location'),
+    'help' => t('Select objects based on their location name or GUID'),
     'filter' => array(
       'handler' => 'views_handler_filter_cnapi_location',
     ),
   );
 
+  // LatLng (latlng) filter
   $data['cnapiactors']['latlng'] = array(
     'title' => t('GIS Coordinates'),
     'help' => t('Select objects for a GIS location'),
