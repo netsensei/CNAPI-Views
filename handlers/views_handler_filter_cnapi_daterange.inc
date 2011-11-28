@@ -21,8 +21,8 @@ class views_handler_filter_cnapi_daterange extends views_handler_filter_cnapi {
     parent::init($view, $options);
 
     // Set the operator, this is set dynamically
-    $this->operator = $this->options['date_type'];
-    $this->date = $this->options['date'];
+    $this->operator = $this->options['cnapi_date_type'];
+    $this->cnapi_date = $this->options['cnapi_date'];
   }
 
   /**
@@ -31,8 +31,8 @@ class views_handler_filter_cnapi_daterange extends views_handler_filter_cnapi {
   function option_definition() {
     $options = parent::option_definition();
 
-    $options['date_type'] = array('default' => self::CNAPI_DATE_DATERANGE);
-    $options['date'] = array('default' => '');
+    $options['cnapi_date_type'] = array('default' => self::CNAPI_DATE_DATERANGE);
+    $options['cnapi_date'] = array('default' => '');
 
     return $options;
   }
@@ -41,7 +41,7 @@ class views_handler_filter_cnapi_daterange extends views_handler_filter_cnapi {
    * Overrides admin_summary
    */
   function admin_summary() {
-    $date = $this->parse_daterange($this->operator, $this->date);
+    $date = $this->parse_daterange($this->operator, $this->cnapi_date);
     return check_plain((string) $this->operator) . '=' . check_plain((string) $date);
   }
 
@@ -49,23 +49,23 @@ class views_handler_filter_cnapi_daterange extends views_handler_filter_cnapi {
    * Overrides value_form.
    */
   function value_form(&$form, &$form_state) {
-    $form['date'] = array(
+    $form['cnapi_date'] = array(
       '#type' => 'textfield',
       '#title' => 'Datum',
-      '#default_value' => $this->date,
+      '#default_value' => $this->cnapi_date,
       '#description' => 'Formaat yyyy/mm/dd',
       '#size' => 10,
       '#attributes' => array('class' => array('date-for-datepicker')),
     );
 
-    $form['date_type'] = array(
+    $form['cnapi_date_type'] = array(
       '#type' => 'select',
       '#title' => t('Date type'),
       '#options' => array(
         self::CNAPI_DATE_DATERANGE => t('Date range (x..y)'),
         self::CNAPI_DATE_DATE => t('One or more discrete dates (x;y)'),
        ),
-      '#default_value' => $this->date_type,
+      '#default_value' => $this->cnapi_date_type,
     );
 
     $form['#attached']['library'][] = array('cnapi_browse', 'jquery.datePicker');
@@ -81,7 +81,7 @@ class views_handler_filter_cnapi_daterange extends views_handler_filter_cnapi {
    */
   function query() {
     $this->ensure_my_table();
-    $date = $this->parse_daterange($this->operator, $this->date);
+    $date = $this->parse_daterange($this->operator, $this->cnapi_date);
     $this->query->add_where($this->options['group'], "$this->table_alias.$this->real_field", $date, $this->operator);
   }
 
